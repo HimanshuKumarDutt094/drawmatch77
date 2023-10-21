@@ -1,11 +1,16 @@
 const production = process.env.NODE_ENV === "production";
-const client = production ? "draw-match77.vercel.app" : "http://localhost:1234";
+const client = production
+  ? "https://draw-match77-client.vercel.app"
+  : "http://localhost:1234";
 const io = require("socket.io")(3000, {
   cors: {
     origin: client,
   },
 });
 const rooms = {};
+console.log("production : ", production);
+console.log("client : ", client);
+
 //list random words of animal name and fruit names
 //
 const words = [
