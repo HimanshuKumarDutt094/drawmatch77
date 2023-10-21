@@ -2,7 +2,7 @@ import { io } from "socket.io-client";
 import DrawableCanvas from "./DrawableCanvas.js";
 const production = process.env.NODE_ENV === "production";
 const serverURL = production
-  ? "https://chat-app-socket-io.netlify.app"
+  ? "draw-match77.vercel.app"
   : "http://localhost:3000";
 const urlParams = new URLSearchParams(window.location.search);
 const roomId = urlParams.get("room-id");
