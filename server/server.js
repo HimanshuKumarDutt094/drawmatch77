@@ -1,7 +1,5 @@
 const production = process.env.NODE_ENV === "production";
-const client = production
-  ? "https://chat-app-socket-io.netlify.app"
-  : "http://localhost:1234";
+const client = production ? "draw-match77.vercel.app" : "http://localhost:1234";
 const io = require("socket.io")(3000, {
   cors: {
     origin: client,
